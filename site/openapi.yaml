@@ -1,0 +1,67 @@
+openapi: "3.1.0"
+info:
+  version: 1.0.0
+  title: IKSM
+  license:
+    name: "unknown"
+    url: "unknown"
+servers:
+  - url: "/"
+paths:
+  "/bullet":
+    post:
+      summary: Fetch bullet token
+      security: []
+      operationId: bullet.post
+      requestBody:
+        $ref: "#/components/requestBodies/Bullet"
+      responses:
+        "200":
+          $ref: "#/components/responses/Bullet"
+        "400":
+          $ref: "#/components/responses/Error"
+
+components:
+  requestBodies:
+    Bullet:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              sessionToken:
+                type: string
+          example:
+            sessionToken: "..."
+  responses:
+    Error:
+      description: Failure
+    Bullet:
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              webToken:
+                description: Also known as `gtoken` cookie.
+                type: object
+                properties:
+                  token:
+                    type: string
+                  expiresIn:
+                    type: number
+                  expiresAt:
+                    type: number
+              bulletToken:
+                type: object
+                properties:
+                  token:
+                    type: string
+          example:
+            webToken:
+              token: "..."
+              expiresIn: 23400
+              expiresAt: 1672534861
+            bulletToken:
+              token: "..."

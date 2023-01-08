@@ -1,0 +1,9 @@
+[build]
+
+publish = "./site"
+edge_functions = "./edge-functions"
+
+
+[[edge_functions]]
+path = "/bullet"
+function = "bullet"

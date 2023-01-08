@@ -1,0 +1,8 @@
+# for editor integration. not used for deployment.
+
+apis:
+  api@version:
+    root: ./openapi.yaml
+
+extends:
+  - recommended

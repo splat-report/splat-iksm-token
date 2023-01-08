@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fetch IKSM bullet token</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <style type="text/tailwindcss">
+      .prose {
+        @apply min-w-[70ch];
+      }
+      .terminal {
+        @apply text-slate-100 bg-slate-900;
+        @apply block p-2 my-2 whitespace-pre-wrap;
+      }
+      .terminal-out {
+        @apply text-slate-400 text-sm;
+      }
+      img {
+        @apply my-[unset] !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="m-8">
+      <p class="h-8">
+        <a href="https://app.netlify.com/sites/splat-iksm-token/deploys"
+          ><img
+            src="https://api.netlify.com/api/v1/badges/6e346319-1e20-4ac8-bed4-a003c7b9d51c/deploy-status"
+        /></a>
+      </p>
+
+      <hr class="my-8" />
+
+      <article class="prose lg:prose-xl prose-gray">
+        <h1>Fetch IKSM bullet token :)</h1>
+        <p>Pass a session token, you are given a bullet token :)</p>
+        <p>
+          <span class="not-prose">
+            <!-- prettier-ignore -->
+            <code class="terminal">curl -XPOST https://[thissite]/bullet -d '{ sessionToken: "..." }'
+<samp class="terminal-out">{ "bulletToken": { "token": "..." }, ... }</samp></code>
+          </span>
+        </p>
+        <p>see <a href="redoc">/redoc</a> for details.</p>
+
+        <h2>Stateless</h2>
+        <p>
+          Statelessly implemented. No storage, cache, or user session.<br />
+        </p>
+
+        <h2>NOTE</h2>
+        <p>I'm not evil maybe.</p>
+
+        <h2>Credits</h2>
+        <ul>
+          <li>
+            <a href="https://github.com/frozenpandaman/s3s" class="mr-1"
+              ><img
+                src="github-mark.svg"
+                class="inline h-6 mr-1"
+              />frozenpandaman/s3s</a
+            >
+            and
+            <a href="https://github.com/spacemeowx2/s3si.ts"
+              ><img
+                src="github-mark.svg"
+                class="inline h-6 mr-1"
+              />spacemeowx2/s3si.ts</a
+            >
+          </li>
+          <li><code>https://api.imink.app/f</code></li>
+        </ul>
+      </article>
+
+      <hr class="mt-16 mb-8" />
+
+      <article class="prose prose-sm prose-stone">
+        <h1>Feedback</h1>
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          class="p-4 rounded-lg bg-slate-100"
+        >
+          <p>
+            <label>Your Name: <input type="text" name="name" /></label>
+          </p>
+          <p>
+            <label>Message: <textarea name="message"></textarea></label>
+          </p>
+          <p class="mt-8">
+            <button
+              type="submit"
+              class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            >
+              Send
+            </button>
+          </p>
+        </form>
+      </article>
+    </main>
+  </body>
+</html>
