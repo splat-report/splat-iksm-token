@@ -24,7 +24,7 @@
     "https://edge.netlify.com/bootstrap/edge_function.ts": "a4badf05712b596e0d1a8bb02e3de3f0d3b0b1ee85035c25bb645760986af469",
     "https://edge.netlify.com/bootstrap/environment.ts": "310fda1b6341d50ba1b7838acd3acdcc883a6c59e30783fa486fa03fa512cd3f",
     "https://edge.netlify.com/bootstrap/feature_flags.ts": "7d08fd81442364a1756184de62ad8de1ac118799812c6f7fd9f8733431993a77",
-    "https://edge.netlify.com/bootstrap/function_chain.ts": "b19b0a3b471dfd15bcaba5e847000d8019b627292d23bb4e1fec31d991af78a8",
+    "https://edge.netlify.com/bootstrap/function_chain.ts": "30f7f70dfda5401ee0caeefd221a4ee11f14516d75b5d72f107592428128f228",
     "https://edge.netlify.com/bootstrap/geo.ts": "aa52dbe3bd74ae7568e20772700568751f812aa8ca2af728db7462a1d67c2d76",
     "https://edge.netlify.com/bootstrap/handler.ts": "aa03740d103267eda79b4e7918c43b8ccf38a3c8a92facf7b68127939aa89872",
     "https://edge.netlify.com/bootstrap/headers.ts": "d27a0ce164336fe30b0041bac574aa8302cf5f89601f3e238a22a0e88713c688",
