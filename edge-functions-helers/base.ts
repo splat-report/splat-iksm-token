@@ -1,5 +1,7 @@
 import { Context } from "https://edge.netlify.com/";
 
+const IS_DEV = Deno.env.get("NETLIFY_DEV") === "true";
+
 type Handler = (request: Request, context: Context) => Promise<Response>;
 
 class BodyError extends Error {}
@@ -20,6 +22,9 @@ export function asStandardHandler(rawHandler: Handler): Handler {
     } catch (error) {
       if (error instanceof BodyError) {
         return asErrRes("Failed to parse the request body as JSON");
+      }
+      if (IS_DEV) {
+        console.error(error);
       }
       return asErrRes("Something wrong or network error");
     }
