@@ -1,7 +1,7 @@
 import { $fetch } from "https://esm.sh/ofetch@latest";
 import { getF } from "./f.ts";
 
-const NSO_APP_VERSION = "2.7.1";
+const NSO_APP_VERSION = "2.8.0";
 const IKSM_WEBVIEW_VERSION = "6.0.0-e135295b";
 
 type User = {
